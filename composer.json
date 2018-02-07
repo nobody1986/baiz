@@ -1,0 +1,7 @@
+{
+    "name": "nobody1986/baiz",
+    "description": "A compiler combine of php.",
+    "type": "library",
+    "license": "BSD",
+    "require": {}
+}
