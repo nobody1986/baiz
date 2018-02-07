@@ -3,5 +3,10 @@
     "description": "A compiler combine of php.",
     "type": "library",
     "license": "BSD",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4" : {
+            "Nobody1986\\Baiz\\" : "src/"
+        }
+    }
 }
