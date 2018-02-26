@@ -1,2 +1,2 @@
 # baiz
-A compiler combine of php.
+A parser combinator of php.

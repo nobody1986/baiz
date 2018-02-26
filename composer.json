@@ -6,7 +6,12 @@
     "require": {},
     "autoload": {
         "psr-4" : {
-            "Nobody1986\\Baiz\\" : "src/"
+            "Baiz\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Baiz\\Tests\\": "tests/"
         }
     }
 }
