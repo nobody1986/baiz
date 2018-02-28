@@ -5,7 +5,6 @@ namespace Baiz\Unit;
 class Charactar extends Element{
     function __construct($s){
         $this->string = $s;
-        $this->name= "string";
     }
     function match($string,$start=0){
         $length = strlen($string);
@@ -17,6 +16,6 @@ class Charactar extends Element{
                 throw new Exception();
             }
         }
-        return new \Baiz\Result\Result($this->name,$string,$start,$start+strlen($this->string));
+        return [new \Baiz\Result\Result($this->_name,$string,$start,$start+strlen($this->string))];
     }
 }

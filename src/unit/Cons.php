@@ -3,20 +3,18 @@
 namespace Baiz\Unit;
 
 class Cons extends Element{
-    function __construct($s){
-        $this->string = $s;
+    function __construct($left,$right){
+        $this->left = $left;
+        $this->right = $right;
         $this->name= "cons";
     }
     function match($string,$start=0){
-        $length = strlen($string);
-        if($length-$start<strlen($this->string)){
-            throw new Exception();
+        $left = $this->left->match($string,$start);
+        $right = $this->right->match($string,$left[sizeof($left)-1]->end);
+        if(empty($this->_name)){
+            return array_merge($left,$right);
+        } else{
+            return [new \Baiz\Result\Result($this->_name,$string,$start,$right[sizeof($right)-1]->end)];
         }
-        for($start=0;$i<$length;++$i){
-            if($string[$start+$i]!=$this->string[$i]){
-                throw new Exception();
-            }
-        }
-        return new \Baiz\Result\Result($this->name,$string,$start,$start+strlen($this->string));
     }
 }
