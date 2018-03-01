@@ -21,7 +21,7 @@ class Select extends Element{
 			}
 		}
 		catch(Exception $e){
-			$right = $this->right->match($string,$left[sizeof($left)-1]->end);
+			$right = $this->right->match($string,$start);
 			if(empty($this->_name)){
 				return $right;
 			}

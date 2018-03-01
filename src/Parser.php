@@ -2,7 +2,9 @@
 namespace Baiz;
 
 class Parser{
-    public function parse(){
-
+    protected $_string;
+    public function parse($string){
+        $this->_string = $string;
+        
     }
 }
