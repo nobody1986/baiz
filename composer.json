@@ -4,7 +4,7 @@
     "require": {
         "php": ">=5.6.0"
     },
-    "license": "BSD",
+    "license": "BSD-2-Clause",
     "authors": [
         {
             "name": "nobody1986",
