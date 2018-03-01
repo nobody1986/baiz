@@ -5,6 +5,12 @@
         "php": ">=5.6.0"
     },
     "license": "BSD",
+    "authors": [
+        {
+            "name": "nobody1986",
+            "email": "delmeok@gmail.com"
+        }
+    ],
     "autoload": {
         "psr-4" : {
             "Baiz\\" : "src/"
