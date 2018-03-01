@@ -1,17 +1,16 @@
 {
     "name": "nobody1986/baiz",
-    "description": "A compiler combine of php.",
-    "type": "library",
+    "keywords": ["parser"],
+    "require": {
+        "php": ">=5.6.0"
+    },
     "license": "BSD",
-    "require": {},
     "autoload": {
         "psr-4" : {
             "Baiz\\" : "src/"
         }
     },
     "autoload-dev": {
-        "psr-4": {
-            "Baiz\\Tests\\": "tests/"
-        }
+
     }
 }
