@@ -17,16 +17,25 @@ class Select extends Element{
 				return $left;
 			}
 			else{
-				return [new \Baiz\Result\Result($this->_name,$string,$start,$left[sizeof($left)-1]->end)];
+				if(sizeof($left)==0){
+					return [new \Baiz\Result\Result($this->_name,$string,$start,$start,$left)];
+				}else{
+					return [new \Baiz\Result\Result($this->_name,$string,$start,$left[sizeof($left)-1]->end,$left)];
+				}
+				
 			}
 		}
-		catch(Exception $e){
+		catch(\Exception $e){
 			$right = $this->right->match($string,$start);
 			if(empty($this->_name)){
 				return $right;
 			}
 			else{
-				return [new \Baiz\Result\Result($this->_name,$string,$start,$right[sizeof($right)-1]->end)];
+				if(sizeof($right)==0){
+					return [new \Baiz\Result\Result($this->_name,$string,$start,$start,$right)];
+				}else{
+					return [new \Baiz\Result\Result($this->_name,$string,$start,$right[sizeof($right)-1]->end,$right)];
+				}
 			}
 		}
 	}

@@ -23,5 +23,5 @@ abstract class Element{
     function more(){
         
     }
-    abstract function parse($string,$start=0);
+    abstract function match($string,$start=0);
 }
