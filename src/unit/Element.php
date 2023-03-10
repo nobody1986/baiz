@@ -1,27 +1,30 @@
 <?php
 
-namespace Baiz\Unit;
+namespace Nobody1986\Baiz\Unit;
 
-abstract class Element{
-    protected $_name = 0 ;
+abstract class Element
+{
+    protected $_name = "";
 
-    public function setName($name){
+
+    public function setName($name)
+    {
         $this->_name = $name;
     }
-    function and($right){
-        
+    function and($right)
+    {
     }
-    function or($right){
-        
+    function or($right)
+    {
     }
-    function maybe(){
-        
+    function maybe()
+    {
     }
-    function any(){
-        
+    function any()
+    {
     }
-    function more(){
-        
+    function more()
+    {
     }
-    abstract function match($string,$start=0);
+    abstract function match($string, $start = 0);
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Baiz\Unit;
+namespace Nobody1986\Baiz\Unit;
 
 /**
  * *

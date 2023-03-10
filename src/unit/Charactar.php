@@ -1,8 +1,11 @@
 <?php
 
-namespace Baiz\Unit;
+namespace Nobody1986\Baiz\Unit;
 
 class Charactar extends Element{
+
+    private $string="";
+    private $length=0;
     function __construct($s){
         $this->string = $s;
         $this->length = strlen($s);
@@ -25,6 +28,6 @@ class Charactar extends Element{
                 throw new \Exception();
             }
         }
-        return [new \Baiz\Result\Result($this->_name,$string,$start,$start+strlen($this->string))];
+        return [new \Nobody1986\Baiz\Result\Result($this->_name,$string,$start,$start+strlen($this->string))];
     }
 }

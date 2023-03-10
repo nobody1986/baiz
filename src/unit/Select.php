@@ -1,10 +1,13 @@
 <?php
 
-namespace Baiz\Unit;
+namespace Nobody1986\Baiz\Unit;
 
 
 class Select extends Element{
 	
+	private $left = null;
+	private $right = null;
+
 	function __construct($left,$right){
 		$this->left = $left;
 		$this->right = $right;
@@ -18,9 +21,9 @@ class Select extends Element{
 			}
 			else{
 				if(sizeof($left)==0){
-					return [new \Baiz\Result\Result($this->_name,$string,$start,$start,$left)];
+					return [new \Nobody1986\Baiz\Result\Result($this->_name,$string,$start,$start,$left)];
 				}else{
-					return [new \Baiz\Result\Result($this->_name,$string,$start,$left[sizeof($left)-1]->end,$left)];
+					return [new \Nobody1986\Baiz\Result\Result($this->_name,$string,$start,$left[sizeof($left)-1]->end,$left)];
 				}
 				
 			}
@@ -32,9 +35,9 @@ class Select extends Element{
 			}
 			else{
 				if(sizeof($right)==0){
-					return [new \Baiz\Result\Result($this->_name,$string,$start,$start,$right)];
+					return [new \Nobody1986\Baiz\Result\Result($this->_name,$string,$start,$start,$right)];
 				}else{
-					return [new \Baiz\Result\Result($this->_name,$string,$start,$right[sizeof($right)-1]->end,$right)];
+					return [new \Nobody1986\Baiz\Result\Result($this->_name,$string,$start,$right[sizeof($right)-1]->end,$right)];
 				}
 			}
 		}

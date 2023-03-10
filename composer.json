@@ -8,12 +8,16 @@
     "authors": [
         {
             "name": "nobody1986",
-            "email": "delmeok@gmail.com"
+            "email": "as_star@qq.com"
         }
     ],
     "autoload": {
         "psr-4" : {
-            "Baiz\\" : "src/"
+            "Nobody1986\\Baiz\\" : "src/",
+            "Tests\\": "tests/"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
     }
 }

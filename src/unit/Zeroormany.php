@@ -1,12 +1,13 @@
 <?php
 
-namespace Baiz\Unit;
+namespace Nobody1986\Baiz\Unit;
 
 /**
  * *
  */
 class Zeroormany extends Element{
 
+    private $left = null;
     function __construct($left){
         $this->left = $left;
     }
@@ -33,9 +34,9 @@ class Zeroormany extends Element{
         }
         else{
             if(sizeof($ret)==0){
-                return [new \Baiz\Result\Result($this->_name,$string,$start,$start,$ret)];
+                return [new \Nobody1986\Baiz\Result\Result($this->_name,$string,$start,$start,$ret)];
             }else{
-                return [new \Baiz\Result\Result($this->_name,$string,$start,$ret[sizeof($ret)-1]->end,$ret)];
+                return [new \Nobody1986\Baiz\Result\Result($this->_name,$string,$start,$ret[sizeof($ret)-1]->end,$ret)];
             }
             
         }

@@ -1,9 +1,10 @@
 <?php
 
-namespace Baiz\Unit;
+namespace Nobody1986\Baiz\Unit;
 
 class Oneormany extends Element{
 
+    private $left  =null;
     function __construct($left){
         $this->left = $left;
     }
